@@ -1,0 +1,96 @@
+#include "Subordinates.h"
+#include <iostream>
+using namespace std;
+
+
+//конструктор класса subordinates со всеми параметрами
+Subordinates::Subordinates(int amount, float asos) {
+	if (amount >= 0)
+		this->amount = amount;
+	else{
+		cout << "Указано недопустимое значение amount." << endl;
+		this->amount = 0;
+	}
+	if (asos >= 0)
+		this->asos = asos;
+	else {
+		cout << "Указано недопустимое значение asos." << endl;
+		this->asos = 0;
+	}
+}
+
+//конструктор класса subordinates с одним параметром
+Subordinates::Subordinates(int allfields) {
+	if (allfields >= 0) {
+		amount = allfields;
+		asos = allfields;
+	}
+	else {
+		cout << "Указано недопустимое значение allfields." << endl;
+		amount = 0;
+		asos = 0;
+	}
+}
+
+//конструктор класса subordinates без параметров
+Subordinates::Subordinates() {
+	amount = 0;
+	asos = 0;
+}
+
+//метод установки значений
+void Subordinates::set(Subordinates s) {
+	this->amount = s.amount;
+	this->asos = s.asos;
+}
+
+//метод ввода класса subordinates
+void Subordinates::input() {
+	int YesNo, amount;
+	float asos;
+	cout << "Введите количество подчиненных сотрудника: ";
+	cin >> amount;
+	if (amount > 0) {
+		cout << "Вы знаете средний стаж подчиненных? 1 - да, 0 - нет: ";
+		cin >> YesNo;
+		if (YesNo == 1) {
+			cout << "Введите средний стаж подчиненных сотрудника: ";
+			cin >> asos;
+		}
+		else {
+			asos = this->averageseniority(this->amount);
+		}
+	}
+	else
+		asos = 0;
+	Subordinates s(amount, asos);
+	this->set(s);
+}
+
+//метод вывода
+void Subordinates::output() {
+	cout << "Кол-во подчиненных: " << amount << endl;
+	cout << "Средний стаж подчиненных: " << asos << endl << endl;
+}
+
+//метод подсчета среднего стажа
+float Subordinates::averageseniority(int number) {
+	float* arr = new float[2 * number];
+	int i;
+	float avesen = 0;
+	cout << "Вводите сначала целое число лет стажа, затем месяцы!" << endl;
+	for (i = 0; i < 2 * number; i++) {
+		cin >> *(arr + i);
+	}
+	for (i = 0; i < 2 * number; i += 2) {
+		avesen += *(arr + i);
+		avesen += *(arr + i + 1) / 12;
+	}
+	avesen = avesen / number;
+	return avesen;
+}
+
+//метод возвращающий количество полчиненных
+int Subordinates::getamount() {
+	return amount;
+}
