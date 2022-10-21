@@ -4,6 +4,7 @@
 
 class Salary
 {
+    friend Salary operator + (Salary s1, Salary s2);
 public:
     Salary(int overtimecost, int weekendcost, int exppercent, int subspercent, bool expstatus, \
         bool subsstatus);
