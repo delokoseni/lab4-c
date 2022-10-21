@@ -151,3 +151,19 @@ Salary operator + (Salary s1, Salary s2) {
         s1.subsstatus = false;
     return s1;
 }
+//перегрузка оператора ++ префиксный
+Salary& Salary::operator++() {
+    this->overtimecost += 1;
+    this->weekendcost += 1;
+    this->exppercent += 1;
+    this->subspercent += 1;
+    this->expstatus = true;
+    this->subsstatus = true;
+    return *this;
+}
+//перегрузка оператора ++ постфиксный
+Salary Salary::operator++(int) {
+    Salary temp = *this;
+    ++* this;
+    return temp;
+}

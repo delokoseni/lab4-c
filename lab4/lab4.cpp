@@ -105,6 +105,8 @@ int main()
     Salary sal1;
     Salary sal2(5);
     Salary sal3(50, 100, 5, 10, true, true);
+    ++sal3;
+    sal3++;
     sal1.input();
     cout << "\n" << "sal1:" << endl;
     sal1.output();

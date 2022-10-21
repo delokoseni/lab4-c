@@ -15,6 +15,8 @@ public:
     void output();
     int overtimeweekends(int overtime, int weekends);
     int allmoney(int salary, Experience exp, Jobtitle jt);
+    Salary& operator++(); //префиксный
+    Salary operator++(int); //постфиксный
 private:
     int overtimecost; //Процент увеличения оплаты сверхурочных часов 
     int weekendcost; //Процент увеличения оплаты часов отработанных в выходные
