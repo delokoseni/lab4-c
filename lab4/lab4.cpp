@@ -65,6 +65,10 @@ int main()
     Employee emp1;
     Employee emp2(10);
     Employee emp3(exp1, h1, jt3);
+    Employee* emp4;
+    Employee* emp5 = new Employee;
+    emp4 = emp3.get();
+    *emp5 = emp3.getadress();
     string jobt1 = "Менеджер";
     string jobt2 = "Менеджер по закупкам";
     string jobt3 = "Менеджер по менеджерам";
@@ -85,6 +89,12 @@ int main()
     emp1.output();
     cout << "\n" << "emp2:" << endl;
     emp2.output();
+    emp5->editjtitle("Менеджер", "Старший");
+    cout << "\n" << "emp5:" << endl;
+    emp5->output();
+    emp4->editjtitle("Менеджер", "Младший");
+    cout << "\n" << "emp4:" << endl;
+    emp4->output();
     cout << "\n" << "emp3:" << endl;
     emp3.output();
     cout << emp1.getpremium(150) << endl;
@@ -102,4 +112,5 @@ int main()
     p1.printcounter();
     p2.minuscounter();
     p1.minuscounter(2);
+
 }

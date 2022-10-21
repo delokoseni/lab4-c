@@ -101,3 +101,13 @@ void Employee::minuscounter(int number) {
 void Employee::editjtitle(string jtitle, string add) {
 	jt.editjtitle(jtitle, add);
 }
+
+//метод, возвращающий значение через указатель
+Employee* Employee::get() {
+	return this;
+}
+
+//метод, возвращающий значение через ссылку
+Employee& Employee::getadress() {
+	return *this;
+}

@@ -18,6 +18,8 @@ public:
 	static void minuscounter();
 	static void minuscounter(int number);
 	void editjtitle(string jtitle, string add);
+	Employee* get();
+	Employee& getadress();
 private:
 	static int counter;
 	int id; //индивидуальный номер
