@@ -91,3 +91,11 @@ int Hours::hoursmoney(Jobtitle jt, Salary sal) {
 	salary += sal.overtimeweekends(overtime, weekends);
 	return salary;
 }
+
+//перегрузка оператора +
+Hours operator + (Hours h1, Hours h2){
+	h1.normal += h2.normal;
+	h1.overtime += h2.overtime;
+	h1.weekends += h2.weekends;
+	return h1;
+}

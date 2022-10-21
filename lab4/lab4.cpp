@@ -29,6 +29,8 @@ int main()
     Hours h1;
     Hours h2(norm);
     Hours h3(norm, over, week);
+    Hours h4;
+    h4 = h3 + h2;
     h1.input();
     cout << "\n" << "h1:" << endl;
     h1.output();
@@ -36,6 +38,8 @@ int main()
     h2.output();
     cout << "\n" << "h3:" << endl;
     h3.output();
+    cout << "\n" << "h4:" << endl;
+    h4.output();
     cout << "\n" << "Отработано всего часов h3: " << h3.allhours() << endl;
     int a = 6;
     float b = 1.2f;
