@@ -2,6 +2,7 @@
 
 class Subordinates
 {
+	friend Subordinates operator + (Subordinates s1, Subordinates s2);
 public:
 	Subordinates(int a, float A);
 	Subordinates(int allfields);

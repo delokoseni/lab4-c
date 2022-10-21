@@ -94,3 +94,10 @@ float Subordinates::averageseniority(int number) {
 int Subordinates::getamount() {
 	return amount;
 }
+
+//перегрузка оператора +
+Subordinates operator + (Subordinates s1, Subordinates s2) {
+	s1.amount += s2.amount;
+	s1.asos += s2.asos;
+	return s1;
+}
