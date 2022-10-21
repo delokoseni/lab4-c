@@ -78,13 +78,6 @@ float Jobtitle::comparisonhc(float hcost) {
 	return percent;
 }
 
-//метод вспомогательный при вычислении зарплаты
-int Jobtitle::jtmoney(int normal) {
-	int x = 0;
-	x += normal * hourlycost;
-	return x;
-}
-
 //метод возвращающий количество подчиненных сотрудника
 int Jobtitle::getamount() {
 	return subs.getamount();

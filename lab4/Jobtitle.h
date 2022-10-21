@@ -3,8 +3,11 @@
 #include <string>
 using namespace std;
 
+class Hours;
+
 class Jobtitle
 {
+	friend int normhcost(Hours hour, Jobtitle jtitle);
 public:
 	Jobtitle(string j, int h, Subordinates s);
 	Jobtitle(int allfields);
@@ -13,7 +16,6 @@ public:
 	void output();
 	float comparisonhc(float hcost);
 	void set(Jobtitle j);
-	int jtmoney(int normal);
 	int getamount();
 	void editjtitle(string jtitle, string add);
 private:

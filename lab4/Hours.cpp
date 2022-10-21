@@ -86,7 +86,8 @@ int Hours::allhours() {
 //метод возвращающий зарплаты за все отработанные часы
 int Hours::hoursmoney(Jobtitle jt, Salary sal) {
 	int salary = 0;
-	salary += jt.jtmoney(normal);
+	//использование дружественной функции
+	salary += normhcost(*(this), jt);
 	salary += sal.overtimeweekends(overtime, weekends);
 	return salary;
 }

@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClCompile Include="Employee.cpp" />
     <ClCompile Include="Experience.cpp" />
+    <ClCompile Include="friendfunc.cpp" />
     <ClCompile Include="Hours.cpp" />
     <ClCompile Include="Jobtitle.cpp" />
     <ClCompile Include="lab4.cpp" />

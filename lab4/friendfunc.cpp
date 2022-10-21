@@ -1,9 +1,8 @@
-#include "Jobtitle.h"
 #include "Hours.h"
-#include "Salary.h"
-#include <iostream>
+#include "Jobtitle.h"
 
-int hoursmoney1(Hours hour, Jobtitle jt, Salary sal) {
-
-	return 0;
+int normhcost(Hours hour, Jobtitle jtitle) {
+	int x = 0;
+	x += hour.normal * jtitle.hourlycost;
+	return x;
 }

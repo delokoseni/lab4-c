@@ -1,9 +1,9 @@
 #pragma once
-#include "Jobtitle.h"
 #include "Salary.h"
 
 class Hours
 {
+	friend int normhcost(Hours hour, Jobtitle jtitle);
 public:
 	Hours(int n, int o, int w);
 	Hours(int allfields);
