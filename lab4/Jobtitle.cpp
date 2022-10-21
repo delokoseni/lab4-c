@@ -103,3 +103,11 @@ void Jobtitle::editjtitle(string jtitle, string add) {
 		this->jtitle += *(words + i) + " ";
 	}
 }
+
+//перегрузка оператора +
+Jobtitle operator + (Jobtitle j1, Jobtitle j2) {
+	j1.hourlycost += j2.hourlycost;
+	j1.subs = j1.subs + j2.subs;
+	j1.jtitle += j2.jtitle;
+	return j1;
+}

@@ -7,6 +7,7 @@ class Hours;
 
 class Jobtitle
 {
+	friend Jobtitle operator + (Jobtitle j1, Jobtitle j2);
 	friend int normhcost(Hours hour, Jobtitle jtitle);
 public:
 	Jobtitle(string j, int h, Subordinates s);
