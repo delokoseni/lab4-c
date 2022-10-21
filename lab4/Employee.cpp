@@ -26,7 +26,7 @@ Employee::Employee(int allfields) {
 		jt = j;
 	}
 	else {
-		cout << "”казано недопустимое значение allfields.";
+		cout << "”казано недопустимое значение allfields." << endl;
 		Experience e;
 		Hours h;
 		Jobtitle j;
@@ -80,22 +80,24 @@ string Employee::getpremium(int houramount) {
 		return "ѕреми€ положена";
 }
 
-/**  ћетод вывода счетчика количества сотрудников **/
+//метод вывода счетчика количества сотрудников
 void Employee::printcounter() {
 	cout << " оличество сотрудников: " + counter << endl;
 }
+
+//метод уменьшени€ количества сотрудников
 void Employee::minuscounter() {
 	counter--;
 	cout <<" оличество сотрудников уменьшено на 1." << endl;
 }
-/** ћетод уменьшени€ количества сотрудников **/
+//метод уменьшени€ количества сотрудников
 void Employee::minuscounter(int number) {
 	int x = counter;
 	counter = counter - number;
 	cout << " оличество сотрудников уменьшено c " << x << " до " << counter << endl;
 }
 
-/** ћетод обращени€ к методу внутреннего класса **/
+//метод обращени€ к методу внутреннего класса
 void Employee::editjtitle(string jtitle, string add) {
 	jt.editjtitle(jtitle, add);
 }

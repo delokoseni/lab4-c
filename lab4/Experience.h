@@ -1,7 +1,6 @@
 #pragma once
 class Experience
 {
-	friend class Employee;
 public:
 	Experience(int w, int a, int m);
 	Experience(int x);

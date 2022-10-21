@@ -58,7 +58,7 @@ void Experience::input() {
 	cin >> workingyears;
 	cout << "Из них в армии (кол-во лет): ";
 	cin >> army;
-	cout << "Из них в декретном отпуске(кол - во лет) :";
+	cout << "Из них в декретном отпуске(кол - во лет): ";
 	cin >> maternityleave;
 	workingyears = workingyears - army - maternityleave;
 	Experience e(workingyears, army, maternityleave);

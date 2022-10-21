@@ -105,8 +105,6 @@ void Jobtitle::editjtitle(string jtitle, string add) {
 	for(i = 0; i < n; i++) {
 		//если строки одинаковые
 		if (!(*(words + i)).compare(jtitle)) {
-			cout << *(words + i) << endl;
-			cout << jtitle << endl;
 			this->jtitle += add + " ";
 		}
 		this->jtitle += *(words + i) + " ";

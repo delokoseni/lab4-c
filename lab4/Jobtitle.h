@@ -1,11 +1,10 @@
 #pragma once
-#include "subordinates.h"
+#include "Subordinates.h"
 #include <string>
 using namespace std;
 
 class Jobtitle
 {
-	friend class Employee;
 public:
 	Jobtitle(string j, int h, Subordinates s);
 	Jobtitle(int allfields);

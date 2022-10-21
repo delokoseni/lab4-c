@@ -4,7 +4,6 @@
 
 class Hours
 {
-	friend class Employee;
 public:
 	Hours(int n, int o, int w);
 	Hours(int allfields);

@@ -2,7 +2,6 @@
 
 class Subordinates
 {
-	friend class Employee;
 public:
 	Subordinates(int a, float A);
 	Subordinates(int allfields);

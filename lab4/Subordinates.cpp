@@ -70,7 +70,7 @@ void Subordinates::input() {
 //метод вывода
 void Subordinates::output() {
 	cout << "Кол-во подчиненных: " << amount << endl;
-	cout << "Средний стаж подчиненных: " << asos << endl << endl;
+	cout << "Средний стаж подчиненных: " << asos << endl;
 }
 
 //метод подсчета среднего стажа
