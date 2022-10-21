@@ -151,6 +151,7 @@ Salary operator + (Salary s1, Salary s2) {
         s1.subsstatus = false;
     return s1;
 }
+
 //перегрузка оператора ++ префиксный
 Salary& Salary::operator++() {
     this->overtimecost += 1;
@@ -161,6 +162,7 @@ Salary& Salary::operator++() {
     this->subsstatus = true;
     return *this;
 }
+
 //перегрузка оператора ++ постфиксный
 Salary Salary::operator++(int) {
     Salary temp = *this;

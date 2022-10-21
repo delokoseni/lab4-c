@@ -14,6 +14,8 @@ public:
 	int allhours();
 	void set(Hours h);
 	int hoursmoney(Jobtitle jt, Salary sal);
+	Hours& operator++(); //префиксный
+	Hours operator++(int); //постфиксный
 private:
 	int normal; //кол-во часов, отработанных по графику
 	int overtime; //кол-во часов, отработанных сверхурочно

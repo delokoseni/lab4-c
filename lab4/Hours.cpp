@@ -99,3 +99,18 @@ Hours operator + (Hours h1, Hours h2){
 	h1.weekends += h2.weekends;
 	return h1;
 }
+
+//перегрузка оператора ++ префиксный
+Hours& Hours::operator++() {
+	this->normal += 1;
+	this->overtime += 1;
+	this->weekends += 1;
+	return *this;
+}
+
+//перегрузка оператора ++ постфиксный
+Hours Hours::operator++(int) {
+	Hours temp = *this;
+	++* this;
+	return temp;
+}
