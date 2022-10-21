@@ -21,6 +21,8 @@ public:
 	void editjtitle(string jtitle, string add);
 	Employee* get();
 	Employee& getadress();
+	Employee& operator++(); //префиксный
+	Employee operator++(int); //постфиксный
 private:
 	static int counter;
 	int id; //индивидуальный номер

@@ -119,3 +119,18 @@ Employee operator + (Employee e1, Employee e2) {
 	e1.jt = e1.jt + e2.jt;
 	return e1;
 }
+
+//перегрузка оператора ++ префиксный
+Employee& Employee::operator++() {
+	this->exp++;
+	this->hour++;
+	this->jt++;
+	return *this;
+}
+
+//перегрузка оператора ++ постфиксный
+Employee Employee::operator++(int) {
+	Employee temp = *this;
+	++* this;
+	return temp;
+}
