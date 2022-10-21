@@ -101,3 +101,17 @@ Subordinates operator + (Subordinates s1, Subordinates s2) {
 	s1.asos += s2.asos;
 	return s1;
 }
+
+//перегрузка оператора ++ префиксный
+Subordinates& Subordinates::operator++() {
+	this->amount += 1;
+	this->asos += 1;
+	return *this;
+}
+
+//перегрузка оператора ++ постфиксный
+Subordinates Subordinates::operator++(int) {
+	Subordinates temp = *this;
+	++* this;
+	return temp;
+}
