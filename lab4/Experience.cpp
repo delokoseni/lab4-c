@@ -86,3 +86,18 @@ Experience operator + (Experience e1, Experience e2) {
 	e1.army += e2.army;
 	return e1;
 }
+
+//перегрузка оператора ++ префиксный
+Experience& Experience::operator++() {
+	this->workingyears += 1;
+	this->maternityleave += 1;
+	this->army += 1;
+	return *this;
+}
+
+//перегрузка оператора ++ постфиксный
+Experience Experience::operator++(int) {
+	Experience temp = *this;
+	++* this;
+	return temp;
+}

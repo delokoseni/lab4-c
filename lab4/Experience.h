@@ -11,6 +11,8 @@ public:
 	void output();
 	float allexp();
 	void set(Experience e);
+	Experience& operator++(); //префиксный
+	Experience operator++(int); //постфиксный
 private:
 	int workingyears; //кол-во реально отработанных лет
 	int army; //кол-во лет в армии, если сохранялось рабочее место
