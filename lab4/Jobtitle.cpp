@@ -111,3 +111,17 @@ Jobtitle operator + (Jobtitle j1, Jobtitle j2) {
 	j1.jtitle += j2.jtitle;
 	return j1;
 }
+
+//перегрузка оператора ++ префиксный
+Jobtitle& Jobtitle::operator++() {
+	this->hourlycost += 1;
+	this->subs++;
+	return *this;
+}
+
+//перегрузка оператора ++ постфиксный
+Jobtitle Jobtitle::operator++(int) {
+	Jobtitle temp = *this;
+	++* this;
+	return temp;
+}

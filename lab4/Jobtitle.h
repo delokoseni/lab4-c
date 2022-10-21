@@ -19,6 +19,8 @@ public:
 	void set(Jobtitle j);
 	int getamount();
 	void editjtitle(string jtitle, string add);
+	Jobtitle& operator++(); //префиксный
+	Jobtitle operator++(int); //постфиксный
 private:
 	string jtitle; //наименование должности
 	int hourlycost; //стоимость часа работы
