@@ -2,6 +2,7 @@
 
 class Experience
 {
+	friend Experience operator + (Experience e1, Experience e2);
 public:
 	Experience(int w, int a, int m);
 	Experience(int x);

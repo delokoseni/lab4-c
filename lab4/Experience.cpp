@@ -78,3 +78,11 @@ float Experience::allexp() {
 	all = workingyears + army + maternityleave;
 	return all;
 };
+
+//перегрузка оператора +
+Experience operator + (Experience e1, Experience e2) {
+	e1.workingyears = e2.workingyears;
+	e1.maternityleave = e2.maternityleave;
+	e1.army = e2.army;
+	return e1;
+}
