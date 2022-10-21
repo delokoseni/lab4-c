@@ -111,3 +111,11 @@ Employee* Employee::get() {
 Employee& Employee::getadress() {
 	return *this;
 }
+
+//перегрузка оператора +
+Employee operator + (Employee e1, Employee e2) {
+	e1.exp = e1.exp + e2.exp;
+	e1.hour = e1.hour + e2.hour;
+	e1.jt = e1.jt + e2.jt;
+	return e1;
+}

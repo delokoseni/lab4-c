@@ -6,6 +6,7 @@
 using namespace std;
 
 class Employee {
+	friend Employee operator + (Employee e1, Employee e2);
 public:
 	Employee(Experience e, Hours h, Jobtitle j);
 	Employee(int allfields);
